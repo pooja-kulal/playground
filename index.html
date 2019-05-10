@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/available.css">
+  <link rel="stylesheet" type="text/css" href="css/seatstyle.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="js/script.js"></script>
+<script>  
+  function validate(){
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+if ( username == "admin" && password == "admin"){
+	alert ("Login successfully");
+	window.location = "container.html";
+				return false;
+}
+else{
+	alert("Invalid User name and Password");
+	window.location="loghtm.html";
+}
+// Disabling fields after 3 attempts.
+  
+  }
+  </script>
+  
+  
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Login</a></li>
+  <li><a href="#news">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="container.html">Configuration</a></li>
+</ul>
+
+
+
+<div class="row">
+	<div class="col s12 m6 l4 offset-m3 offset-l4 z-depth-1" id="loginbox">
+		<form >
+			<div class="row" style="border-bottom: 1px solid black;">
+				<h2 class="center-align"> Sign in</h2>
+			</div>
+			<div class="row valign-wrapper">
+				<div class="circle  grey lighten-1 valign z-depth-2">
+					<p class="center-align">
+						<i class="material-icons large white-text">perm_identity</i>
+					</p>
+				</div>
+			</div>
+		
+			<div class="row input-field">
+				<input type="text" name="username" id="username" placeholder="User Name">
+				
+			</div>
+			<div class="row input-field">
+				<input type="password" name="password" id="password" placeholder="Password">
+				
+			</div>
+			<div class="row">
+
+				<button type="button" class="btn waves-effect col s12 black" onclick="validate()">Sign in</button>
+			</div>
+			<div class="row">
+				<!--No account? <a href="signmeup.php">Register</a> Now! -->
+			</div>
+			<span class="red-text">
+				
+			</span>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>
